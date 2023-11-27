@@ -1,0 +1,32 @@
+pipeline {
+    agent {
+        label "my_vm"
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build!'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test!'
+            }
+        }
+        stage('QA') {
+            steps {
+                echo 'QA!'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy!'
+            }
+        }
+        stage('Monitor') {
+            steps {
+                echo 'Monitor!'
+            }
+        }
+    }
+}
