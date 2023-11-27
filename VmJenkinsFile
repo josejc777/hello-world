@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        label="my_vm"
+    }
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello world!'
+            }
+        }
+    }
+}
