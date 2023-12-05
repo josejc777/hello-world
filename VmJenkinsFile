@@ -3,9 +3,13 @@ pipeline {
         label "my_vm"
     }
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'Hello world!'
+                echo 'Building application!'
+                sh "make clean"
+                sh "make"
+                sh "chmod +x build_steps_script.sh"
+                sh "./build_steps_script.sh"
             }
         }
     }
