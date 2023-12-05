@@ -12,5 +12,11 @@ pipeline {
                 sh "./build_steps_script.sh"
             }
         }
+        stage('Run') {
+           steps {
+               echo "Run the application"
+               sh "./hello-world"
+           }
+        }
     }
 }
